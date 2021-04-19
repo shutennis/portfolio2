@@ -1,0 +1,61 @@
+@media only screen and (max-width: 640px){
+  .home-item{
+    position:absolute;
+    top:37%;
+    right:15%;
+    color:white;
+  }
+  .headnig{
+    text-align:center;
+  }
+  .about-contact{
+    flex-wrap: wrap;
+    text-align:center;
+  }
+  .about-item{
+    width:100%;
+  }
+  .about-textarea{
+    width:100%;
+    text-align:left;
+  }
+  .hero-p{
+    color:#fff;
+    font-size:40px;
+    border:1px solid #fff;
+    padding:40px 60px;
+    font-family: Monotype Corsiva;
+  }
+  header{
+    display:none;
+  }
+  .header-nav{
+    display:block;
+  }
+  .skill-contact{
+    flex-wrap: wrap;
+  }
+  .skill-item{
+    width:80%;
+    margin:0 auto;
+    padding-bottom:50px;
+  }
+  .service-contact{
+    flex-wrap: wrap;
+  }
+  .service-item{
+    width:100%;
+    text-align:center;
+  }
+  .service-textarea{
+    width:100%;
+  }
+  .container4{
+    width:80%;
+    margin:0 auto;
+  }
+  .service-item{
+    padding-bottom:40px;
+  }
+
+}

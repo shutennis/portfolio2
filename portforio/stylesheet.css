@@ -1,0 +1,575 @@
+* {
+  box-sizing: border-box;
+}
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong,
+ sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body {
+  line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;  
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font-family: 'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
+  background:#ececec;
+}
+header{
+  padding:20px 0;
+  background: #fff;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+.header-list{
+  float:right;
+}
+.header-list li{
+  float:left;
+}
+.header-list li a{
+  margin-right:35px;
+  padding-bottom:5px;
+  color:black;
+}
+.header-list li a:hover{
+  border-bottom:1px solid black;
+  opacity:0.7;
+}
+.line{
+  width:0%;
+  height:1px;
+  background-color:#fff;
+  position:fixed;
+  top:50%;
+  z-index:2;
+
+}
+.up{
+  width:100%;
+  height:50%;
+  background-color:#000;
+  position:fixed;
+  z-index:1;
+}
+.down{
+  width:100%;
+  height:50%;
+  background-color:#000;
+  position:fixed;
+  bottom:0;
+  z-index:1;
+}
+
+.hero-p{
+  display:none;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:#fff;
+  font-size:50px;
+  border:1px solid #fff;
+  padding:80px 130px;
+  font-family: Monotype Corsiva;
+  font-weight:800;
+}
+.hero{
+  position: relative;
+  width:100%;
+  height:100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.hero video{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  min-width:100%;
+  min-height:100vh;
+  
+}
+
+.main-wrapper{
+  padding-top:35px;
+  padding-bottom:100px;
+  height:auto;
+  background: url(https://hikoportfolio-7abab.web.app/works.jpg) no-repeat 100% 100% fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  color:black;
+}
+.container{
+  width:100%;
+}
+.slider{
+  width:60%;
+  margin:0 auto;
+  overflow: hidden;
+}
+.slider a img{
+  width:100%;
+  transition: 1s all;
+}
+.slider a img:hover{
+  transform: scale(1.1,1.1);
+  transition: 1s all;
+}
+.slider-nav{
+  width:80%;
+  margin:0 auto;
+  padding-top:50px;
+}
+.slider-nav a img{
+  width:100%;
+}
+button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.slide-arrow{
+  position: absolute;
+  top: 65%;
+  margin-top: -15px;
+}
+.prev-arrow{
+  left: -35px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 17px solid #113463;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  cursor: pointer;
+}
+.next-arrow{
+  right: -35px;
+  width: 0;
+  height: 0;
+  border-right: 0 solid transparent;
+  border-left: 17px solid #113463;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  cursor: pointer;
+}
+#about{
+  padding-top:70px;
+}
+.fadeInDown {
+  -webkit-animation-fill-mode:both;
+  -ms-animation-fill-mode:both;
+  animation-fill-mode:both;
+  -webkit-animation-duration:1s;
+  -ms-animation-duration:1s;
+  animation-duration:1s;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  visibility: visible !important;
+ }
+ @-webkit-keyframes fadeInDown {
+  0% { opacity: 0; -webkit-transform: translateY(60px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+ }
+ @keyframes fadeInDown {
+  0% { opacity: 0; -webkit-transform: translateY(60px); -ms-transform: translateY(60px); transform: translateY(60px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform:translateY(0);}
+ }  
+.container1{
+  width:65%;
+  margin:0 auto;
+}
+.headnig{
+  font-size:40px;
+  padding-bottom:60px;
+  font-family: Monotype Corsiva;
+  font-weight: 800;
+}
+.about-contact{
+  display:flex;
+  padding-bottom:100px;
+}
+.about-item{
+  width:50%;
+}
+.about-textarea{
+  width:50%;
+  text-align:left;
+  padding-top:40px;
+}
+.name{
+  font-size:20px;
+  padding-bottom:40px;
+}
+.about-text{
+  line-height:25px;
+  font-size:17px;
+}
+.icon{
+  padding-top:20px;
+}
+.fab{
+  margin-right:30px;
+  font-size:30px;
+  margin-bottom:30px;
+}
+.fa-twitter{
+  color: rgb(108, 163, 246);
+}  
+.fa-instagram{
+  color: rgb(201, 58, 187);
+}
+.header-nav{
+  background: #fff;
+   width:100%;
+   height:auto;
+   position:fixed;
+   top:0;
+   z-index: 10;
+   opacity: 0.8;
+   display:none;
+ }
+ .fa-bars{
+   font-size:30px;
+   color:black;
+  margin-left:30px;
+  margin-top:15px;
+  margin-bottom:15px;
+  cursor: pointer;
+ }
+ .header2-nav{
+   display:none;
+ }
+ .header2-nav li{
+   border-bottom:1px solid black;
+   padding-left:20px;
+   padding-bottom:20px;
+   padding-top:20px;
+ }
+ .header2-nav li a{
+   color:black;
+ }
+ .header2-nav li a:hover{
+   opacity:0.6;
+ }
+ .fa-chevron-right{
+   margin-right:15px;
+ }
+ #skill{
+   padding-bottom:100px;
+ }
+ .skill-wrapper{
+  height:0 auto;
+  background: url(https://www.gowebwork.net/wp-content/uploads/computer-1209641_1280-1024x682.jpg) no-repeat 100% 100% fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  color:white;
+  padding-bottom:40px;
+ }
+.skill-contact{
+  display:flex;
+}
+.skill-item{
+  width:25%;
+  opacity:0;
+  transition: 3.0s;
+}
+.fadein{
+  opacity:1;
+}
+.skill-item img{
+  width:85%;
+  padding-left:30px;
+}
+.skill-text{
+  width:85%;
+  padding-left:30px;
+  padding-top:20px;
+  line-height: 25px;
+}
+.langage{
+  width:85%;
+  text-align:center;
+  padding-left:30px;
+  font-size:25px;
+  padding-bottom:25px;
+}
+.heading3{
+  text-align:center;
+  padding-top:50px;
+  font-size:40px;
+  padding-bottom:40px;
+  font-family: Monotype Corsiva;
+  font-weight: 800;
+}
+#service{
+  padding-top:80px;
+  padding-bottom:80px;
+  background:#ececec;
+}
+.headding5{
+  text-align:center;
+  font-size:40px;
+  padding-bottom:60px;
+  font-family: Monotype Corsiva;
+  font-weight: 800;
+
+}
+.service-contact{
+  display:flex;
+}
+.service-item{
+  width:50%;
+  text-align:right;
+}
+.service-textarea{
+  width:50%;
+  margin-left:50px;
+}
+.service{
+  border-bottom:1px solid rgba(156, 166, 160, 0.48);
+  padding-bottom:5px;
+  font-size:28px;
+  font-weight: normal;
+}
+.service-text{
+  padding-top:40px;
+  font-size:16px;
+  line-height:50px;
+}
+.works{
+  text-align:center;
+  padding-bottom:40px;
+}
+.works-heading{
+  font-size:45px;
+  padding-bottom:25px;
+  font-family: Monotype Corsiva;
+  font-weight: 800;
+}
+.works-p{
+  padding-bottom:30px;
+  font-size:20px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.container4{
+  width:40%;
+  margin:0 auto;
+}
+#contact{
+  position: relative;
+  padding-bottom:70px;
+}
+.fa-chevron-up{
+  position: absolute;
+  top:95%;
+  right:10%;
+  font-size:30px;
+  border:1px solid #17a2b8;
+  background-color:#17a2b8;
+  border-radius: 50% 50%;
+  color:white;
+  padding:10px 12px;
+  cursor:pointer;
+}
+.fa-chevron-up:hover{
+  opacity:0.7;
+}
+
+.contact-item{
+  text-align:center;
+}
+.contact-heading{
+ font-size:45px;
+ padding-bottom:10px;
+ padding-top:70px;
+ font-family: Monotype Corsiva;
+  font-weight: 800;
+}
+.contact-p{
+ font-size:16px;
+ padding-bottom:20px;
+}
+.fab{
+  margin-right:30px;
+  font-size:30px;
+  margin-bottom:30px;
+}
+.fa-twitter{
+  color: rgb(108, 163, 246);
+}  
+.fa-instagram{
+  color: rgb(201, 58, 187);
+}
+input{
+  width:380px;
+  border:1px solid black;
+  border-radius: 7px;
+  padding:10px 0;
+  margin-bottom:20px;
+}
+textarea{
+  width:380px;
+  border:1px solid black;
+  border-radius: 7px;
+}
+form{
+  text-align: center;
+}
+.btn{
+  display:inline-block;
+}
+.btn-info{
+  padding:14px 70px;
+  margin-top:30px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #17a2b8;
+  color:white;
+  box-shadow: 0 7px #1780b8;
+}
+.btn-info:active{
+  box-shadow:none;
+  position:relative;
+  top:7px;
+}
+footer{
+  padding:40px 0 10px 0;
+  background-color:white;
+}
+.footer-list{
+  text-align:center;
+}
+.footer-list a{
+  margin-right:30px;
+  color:black;
+  padding-bottom:5px;
+}
+.footer-list a:hover{
+  border-bottom:1px solid black;
+  opacity:0.7;
+}
+.licence{
+  text-align:center;
+  padding-top:20px;
+}
+.urL{
+  font-size:10px;
+}
+.footer-p p{
+  padding-top:35px;
+  text-align:center;
+ font-size:10px;
+}
+
